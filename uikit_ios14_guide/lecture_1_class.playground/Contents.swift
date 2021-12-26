@@ -1,4 +1,5 @@
 import UIKit
+import Security
 
 //Class
 
@@ -43,17 +44,39 @@ myInfo2.age
 
 //Class - Inheritance
 //상속
-class Soccer {
+
+//부모로 사용할 class를 만듦
+class GameInfo {
     var homeScore = 0
-    var awayScroe =  0
-    func presentScroe() -> String{
-        return homeScore.description + " " + awayScroe.description.debugDescription
-    }
+    var awayScore =  0
     
-}
-let score = soccer: {
+    func presentScroe() -> String {
+        return homeScore.description + ":" + awayScore.description.debugDescription
+    }
 }
 
-let aQfoo
--div oc]]
-let R\
+class Soccer: GameInfo {
+    var time = 0//더 필요한건 추가
+}
+
+class Baseball: GameInfo {
+    override func presentScroe() -> String {
+        return homeScore.description + " : " + awayScore.description
+    }
+    var round = 0
+}
+
+class Football: GameInfo {
+    
+}
+
+let soccer = Soccer()
+soccer.homeScore = 1
+soccer.awayScore = 2
+soccer.time = 5
+soccer.presentScroe()
+
+let baseball = Baseball()
+baseball.homeScore = 3
+baseball.awayScore = 2
+
