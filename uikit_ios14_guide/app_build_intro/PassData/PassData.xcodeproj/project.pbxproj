@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6F8872278C701F00116C89 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F8871278C701F00116C89 /* SegueViewController.swift */; };
 		8DBC7A7F2789E4B2004C4F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC7A7E2789E4B2004C4F42 /* AppDelegate.swift */; };
 		8DBC7A812789E4B2004C4F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC7A802789E4B2004C4F42 /* SceneDelegate.swift */; };
 		8DBC7A832789E4B2004C4F42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC7A822789E4B2004C4F42 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D6F8871278C701F00116C89 /* SegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
 		8DBC7A7B2789E4B2004C4F42 /* PassData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC7A7E2789E4B2004C4F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DBC7A802789E4B2004C4F42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				8DBC7A7E2789E4B2004C4F42 /* AppDelegate.swift */,
 				8DBC7A802789E4B2004C4F42 /* SceneDelegate.swift */,
+				8D6F8871278C701F00116C89 /* SegueViewController.swift */,
 				8DBC7A822789E4B2004C4F42 /* ViewController.swift */,
 				8DBC7A842789E4B2004C4F42 /* Main.storyboard */,
 				8DBC7A962789EC37004C4F42 /* DetailViewController.swift */,
@@ -148,6 +151,7 @@
 				8DBC7A832789E4B2004C4F42 /* ViewController.swift in Sources */,
 				8DBC7A7F2789E4B2004C4F42 /* AppDelegate.swift in Sources */,
 				8DBC7A812789E4B2004C4F42 /* SceneDelegate.swift in Sources */,
+				8D6F8872278C701F00116C89 /* SegueViewController.swift in Sources */,
 				8DBC7A982789EC37004C4F42 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

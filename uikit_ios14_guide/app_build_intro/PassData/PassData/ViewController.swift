@@ -7,6 +7,7 @@
 //  6가지
 
 //1. instence property
+//2. segue
 
 import UIKit
 
@@ -17,6 +18,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueButtonDidTapped" {
+            if let detailVc = segue.destination as? SegueViewController { //화살표에 연결된 목적지에 접근 가능하게 함
+                detailVc.segueDataLabel.text = "abcd"
+            }
+        }
     }
 
     @IBAction func ButtonDidTapped(_ sender: Any) {
