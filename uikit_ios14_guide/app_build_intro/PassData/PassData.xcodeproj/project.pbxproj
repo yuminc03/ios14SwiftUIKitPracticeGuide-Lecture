@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2A66B12793EC7000B0AF33 /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A66AF2793EC7000B0AF33 /* ClosureViewController.swift */; };
+		8D2A66B22793EC7000B0AF33 /* ClosureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2A66B02793EC7000B0AF33 /* ClosureViewController.xib */; };
+		8D2A66B52793FC6F00B0AF33 /* NotiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2A66B32793FC6F00B0AF33 /* NotiDetailViewController.swift */; };
+		8D2A66B62793FC6F00B0AF33 /* NotiDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2A66B42793FC6F00B0AF33 /* NotiDetailViewController.xib */; };
 		8D6F8872278C701F00116C89 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6F8871278C701F00116C89 /* SegueViewController.swift */; };
 		8DBC7A7F2789E4B2004C4F42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC7A7E2789E4B2004C4F42 /* AppDelegate.swift */; };
 		8DBC7A812789E4B2004C4F42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC7A802789E4B2004C4F42 /* SceneDelegate.swift */; };
@@ -16,9 +20,17 @@
 		8DBC7A8B2789E4B3004C4F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBC7A892789E4B3004C4F42 /* LaunchScreen.storyboard */; };
 		8DBC7A982789EC37004C4F42 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC7A962789EC37004C4F42 /* DetailViewController.swift */; };
 		8DBC7A992789EC37004C4F42 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBC7A972789EC37004C4F42 /* DetailViewController.xib */; };
+		8DE734C2278F27D900DD272B /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE734C0278F27D900DD272B /* DelegateViewController.swift */; };
+		8DE734C3278F27D900DD272B /* DelegateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DE734C1278F27D900DD272B /* DelegateViewController.xib */; };
+		8DF135DA278DBF7000110284 /* InstanceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF135D8278DBF7000110284 /* InstanceDetailViewController.swift */; };
+		8DF135DB278DBF7000110284 /* InstanceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF135D9278DBF7000110284 /* InstanceDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D2A66AF2793EC7000B0AF33 /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		8D2A66B02793EC7000B0AF33 /* ClosureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosureViewController.xib; sourceTree = "<group>"; };
+		8D2A66B32793FC6F00B0AF33 /* NotiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDetailViewController.swift; sourceTree = "<group>"; };
+		8D2A66B42793FC6F00B0AF33 /* NotiDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotiDetailViewController.xib; sourceTree = "<group>"; };
 		8D6F8871278C701F00116C89 /* SegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
 		8DBC7A7B2789E4B2004C4F42 /* PassData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBC7A7E2789E4B2004C4F42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +42,10 @@
 		8DBC7A8C2789E4B3004C4F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBC7A962789EC37004C4F42 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8DBC7A972789EC37004C4F42 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		8DE734C0278F27D900DD272B /* DelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateViewController.swift; sourceTree = "<group>"; };
+		8DE734C1278F27D900DD272B /* DelegateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DelegateViewController.xib; sourceTree = "<group>"; };
+		8DF135D8278DBF7000110284 /* InstanceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailViewController.swift; sourceTree = "<group>"; };
+		8DF135D9278DBF7000110284 /* InstanceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstanceDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +80,19 @@
 			children = (
 				8DBC7A7E2789E4B2004C4F42 /* AppDelegate.swift */,
 				8DBC7A802789E4B2004C4F42 /* SceneDelegate.swift */,
-				8D6F8871278C701F00116C89 /* SegueViewController.swift */,
 				8DBC7A822789E4B2004C4F42 /* ViewController.swift */,
 				8DBC7A842789E4B2004C4F42 /* Main.storyboard */,
+				8D6F8871278C701F00116C89 /* SegueViewController.swift */,
 				8DBC7A962789EC37004C4F42 /* DetailViewController.swift */,
 				8DBC7A972789EC37004C4F42 /* DetailViewController.xib */,
+				8DF135D8278DBF7000110284 /* InstanceDetailViewController.swift */,
+				8DF135D9278DBF7000110284 /* InstanceDetailViewController.xib */,
+				8DE734C0278F27D900DD272B /* DelegateViewController.swift */,
+				8DE734C1278F27D900DD272B /* DelegateViewController.xib */,
+				8D2A66AF2793EC7000B0AF33 /* ClosureViewController.swift */,
+				8D2A66B02793EC7000B0AF33 /* ClosureViewController.xib */,
+				8D2A66B32793FC6F00B0AF33 /* NotiDetailViewController.swift */,
+				8D2A66B42793FC6F00B0AF33 /* NotiDetailViewController.xib */,
 				8DBC7A872789E4B3004C4F42 /* Assets.xcassets */,
 				8DBC7A892789E4B3004C4F42 /* LaunchScreen.storyboard */,
 				8DBC7A8C2789E4B3004C4F42 /* Info.plist */,
@@ -135,9 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBC7A8B2789E4B3004C4F42 /* LaunchScreen.storyboard in Resources */,
+				8D2A66B62793FC6F00B0AF33 /* NotiDetailViewController.xib in Resources */,
 				8DBC7A882789E4B3004C4F42 /* Assets.xcassets in Resources */,
 				8DBC7A862789E4B2004C4F42 /* Main.storyboard in Resources */,
+				8DF135DB278DBF7000110284 /* InstanceDetailViewController.xib in Resources */,
 				8DBC7A992789EC37004C4F42 /* DetailViewController.xib in Resources */,
+				8D2A66B22793EC7000B0AF33 /* ClosureViewController.xib in Resources */,
+				8DE734C3278F27D900DD272B /* DelegateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +178,12 @@
 			files = (
 				8DBC7A832789E4B2004C4F42 /* ViewController.swift in Sources */,
 				8DBC7A7F2789E4B2004C4F42 /* AppDelegate.swift in Sources */,
+				8D2A66B12793EC7000B0AF33 /* ClosureViewController.swift in Sources */,
 				8DBC7A812789E4B2004C4F42 /* SceneDelegate.swift in Sources */,
+				8DE734C2278F27D900DD272B /* DelegateViewController.swift in Sources */,
+				8D2A66B52793FC6F00B0AF33 /* NotiDetailViewController.swift in Sources */,
 				8D6F8872278C701F00116C89 /* SegueViewController.swift in Sources */,
+				8DF135DA278DBF7000110284 /* InstanceDetailViewController.swift in Sources */,
 				8DBC7A982789EC37004C4F42 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

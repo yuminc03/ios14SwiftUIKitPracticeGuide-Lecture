@@ -11,8 +11,10 @@ class SegueViewController: UIViewController {
 
     @IBOutlet weak var segueDataLabel: UILabel!
     
+    var dataString = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        segueDataLabel.text = dataString
     }
 }
