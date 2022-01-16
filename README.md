@@ -12,6 +12,7 @@
         <b>uikit_ios14_guide > ~.playground</b> - swift 기초문법을 연습하는 playground<br/>
         <b>app_build_intro > App_Start</b> - app build 기초 (@IBAction, @IBOutlet, UIColor...)<br/>
         <b>app_build_intro > PassData</b> - 다른 controller로 data를 옮길 때 사용하는 방법들 (property, segue, instance, delegate..)<br/>
+        <b>app_build_intro > DispatchQueueProject</b> - main thread, global thread를 사용하면서 async와 sync의 차이점을 살펴봄
     </div>
 </body>
 </html>
