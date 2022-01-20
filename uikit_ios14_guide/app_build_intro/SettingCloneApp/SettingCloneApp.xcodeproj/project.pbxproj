@@ -13,6 +13,8 @@
 		8D04C6F12795A64F00498D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D04C6EF2795A64F00498D20 /* Main.storyboard */; };
 		8D04C6F32795A65000498D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D04C6F22795A65000498D20 /* Assets.xcassets */; };
 		8D04C6F62795A65000498D20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D04C6F42795A65000498D20 /* LaunchScreen.storyboard */; };
+		8D1291D52799A198003F3947 /* SettingMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1291D32799A198003F3947 /* SettingMenuTableViewCell.swift */; };
+		8D1291D62799A198003F3947 /* SettingMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D1291D42799A198003F3947 /* SettingMenuTableViewCell.xib */; };
 		8D3CC3B12796FCA0005CA907 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CC3AF2796FCA0005CA907 /* SettingTableViewCell.swift */; };
 		8D3CC3B22796FCA0005CA907 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3CC3B02796FCA0005CA907 /* SettingTableViewCell.xib */; };
 		8D92D97A27985666005A911E /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92D97927985666005A911E /* ViewControllerExtensions.swift */; };
@@ -27,6 +29,8 @@
 		8D04C6F22795A65000498D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D04C6F52795A65000498D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D04C6F72795A65000498D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1291D32799A198003F3947 /* SettingMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuTableViewCell.swift; sourceTree = "<group>"; };
+		8D1291D42799A198003F3947 /* SettingMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingMenuTableViewCell.xib; sourceTree = "<group>"; };
 		8D3CC3AF2796FCA0005CA907 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		8D3CC3B02796FCA0005CA907 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		8D92D97927985666005A911E /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				8D04C6ED2795A64F00498D20 /* ViewController.swift */,
 				8D92D97927985666005A911E /* ViewControllerExtensions.swift */,
 				8D04C6EF2795A64F00498D20 /* Main.storyboard */,
+				8D1291D32799A198003F3947 /* SettingMenuTableViewCell.swift */,
+				8D1291D42799A198003F3947 /* SettingMenuTableViewCell.xib */,
 				8D3CC3AF2796FCA0005CA907 /* SettingTableViewCell.swift */,
 				8D3CC3B02796FCA0005CA907 /* SettingTableViewCell.xib */,
 				8D04C6F22795A65000498D20 /* Assets.xcassets */,
@@ -134,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1291D62799A198003F3947 /* SettingMenuTableViewCell.xib in Resources */,
 				8D04C6F62795A65000498D20 /* LaunchScreen.storyboard in Resources */,
 				8D04C6F32795A65000498D20 /* Assets.xcassets in Resources */,
 				8D3CC3B22796FCA0005CA907 /* SettingTableViewCell.xib in Resources */,
@@ -153,6 +160,7 @@
 				8D3CC3B12796FCA0005CA907 /* SettingTableViewCell.swift in Sources */,
 				8D92D97A27985666005A911E /* ViewControllerExtensions.swift in Sources */,
 				8D04C6EC2795A64F00498D20 /* SceneDelegate.swift in Sources */,
+				8D1291D52799A198003F3947 /* SettingMenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
