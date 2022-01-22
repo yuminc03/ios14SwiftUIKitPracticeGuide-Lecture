@@ -10,10 +10,57 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var model = [[SettingModel]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableView()
+        setView()
+        configulations()
+    }
+    
+    func configulations() {
+        model.append(
+            [
+                SettingModel(
+                    leftImageName: "person.circle",
+                    menuTitle: "Sign in to your iPhone",
+                    subTitle: "Set up iCloud, the App Store, and more.",
+                    rightImageName: "chevron.right"
+                )
+            ]
+        )
+        model.append(
+            [
+                SettingModel(
+                    leftImageName: "gear",
+                    menuTitle: "General",
+                    subTitle: nil,
+                    rightImageName: "chevron.right"
+                ),
+                SettingModel(
+                    leftImageName: "person.fill",
+                    menuTitle: "Accessibility",
+                    subTitle: nil,
+                    rightImageName: "chevron.right"
+                ),
+                SettingModel(
+                    leftImageName: "hand.raised.fill",
+                    menuTitle: "Privacy",
+                    subTitle: nil,
+                    rightImageName: "chevron.right"
+                )
+            ]
+        )
+        
+        
+    }
+    
+    private func setView() {
+        self.view.backgroundColor = .white.withAlphaComponent(0.95)
+        tableView.backgroundColor = .systemGray.withAlphaComponent(0.08)
+        self.title = "Settings"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     private func setTableView() {
