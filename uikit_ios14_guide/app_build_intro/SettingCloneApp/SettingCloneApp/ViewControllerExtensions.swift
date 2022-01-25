@@ -25,6 +25,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.topTitleLabel.text = data.menuTitle
             cell.profileImageView.image = UIImage(systemName: data.leftImageName ?? "")
             cell.bottomTitleLabel.text = data.subTitle
+            cell.selectionStyle = .none
             return cell
         }
         else {
@@ -33,6 +34,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.leftImageView.image = UIImage(systemName: data.leftImageName ?? "")
             cell.cellTitleLabel.text = data.menuTitle
             cell.rightImageView.image = UIImage(systemName: data.rightImageName ?? "")
+            cell.selectionStyle = .none
             return cell
         }
         
@@ -40,11 +42,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 && indexPath.row == 0 {
-            if let nextVc = UIStoryboard(name: "NextViewController", bundle: nil).instantiateViewController(identifier: "NextViewController") as? NextViewController {
+            if let nextVc = UIStoryboard(name: "NextViewController", bundle: nil).instantiateViewController(withIdentifier: "NextViewController") as? NextViewController {
                 self.navigationController?.pushViewController(nextVc, animated: true)
             }
-            
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,11 +58,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
-    }
 }

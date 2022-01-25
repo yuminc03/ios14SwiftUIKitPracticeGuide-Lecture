@@ -20,6 +20,7 @@ extension NextViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NextTableViewCell", for: indexPath) as! NextTableViewCell
         cell.leftLabel.text = model[indexPath.section][indexPath.row].leftTitle
+        cell.selectionStyle = .none
         return cell
     }
     

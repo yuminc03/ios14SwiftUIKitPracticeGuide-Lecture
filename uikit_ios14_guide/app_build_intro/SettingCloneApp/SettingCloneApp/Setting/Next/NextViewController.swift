@@ -26,6 +26,7 @@ class NextViewController: UIViewController {
     }
     
     private func configulations() {
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         model.append(
             [
                 NextModel(leftTitle: "About")

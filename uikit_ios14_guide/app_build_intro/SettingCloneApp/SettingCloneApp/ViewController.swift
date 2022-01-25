@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         configulations()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     func configulations() {
         model.append(
             [
