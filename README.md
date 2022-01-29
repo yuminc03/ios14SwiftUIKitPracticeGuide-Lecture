@@ -14,6 +14,8 @@
         <b>app_build_intro > PassData</b> - 다른 controller로 data를 옮길 때 사용하는 방법들 (property, segue, instance, delegate..)<br/>
         <b>app_build_intro > DispatchQueueProject</b> - main thread, global thread를 사용하면서 async와 sync의 차이점을 살펴봄<br/>
         <b>app_build_intro > SettingCloneApp</b> - iphone setting app clone coding project<br/>
+        <img src = "![simulator_screenshot_BB93F40E-2BF2-4263-94C4-3BB3364538F1](https://user-images.githubusercontent.com/60338309/151661112-1ef75106-d80a-4e62-a126-bad188ee0d65.png)" width="300"><br>
+
     </div>
 </body>
 </html>
