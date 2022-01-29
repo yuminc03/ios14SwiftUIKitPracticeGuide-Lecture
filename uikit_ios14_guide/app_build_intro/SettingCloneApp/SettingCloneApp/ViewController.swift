@@ -73,6 +73,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewCell")
         tableView.register(UINib(nibName: "SettingMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingMenuTableViewCell")
+        
     }
 }
 

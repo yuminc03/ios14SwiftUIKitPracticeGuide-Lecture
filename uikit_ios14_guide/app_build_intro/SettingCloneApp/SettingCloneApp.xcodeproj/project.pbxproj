@@ -23,6 +23,8 @@
 		8D3FD9CB279C3EEB0014B550 /* NextViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3FD9CA279C3EEB0014B550 /* NextViewControllerExtensions.swift */; };
 		8D3FD9CD279C40440014B550 /* NextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3FD9CC279C40440014B550 /* NextTableViewCell.swift */; };
 		8D3FD9D7279C42D80014B550 /* NextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3FD9D6279C42D80014B550 /* NextModel.swift */; };
+		8D5E0C0827A50DCD001F4D4E /* MyIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5E0C0727A50DCD001F4D4E /* MyIDViewController.swift */; };
+		8D5E0C0C27A50EBF001F4D4E /* MyIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5E0C0B27A50EBF001F4D4E /* MyIDViewController.xib */; };
 		8D92D97A27985666005A911E /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92D97927985666005A911E /* ViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		8D3FD9CA279C3EEB0014B550 /* NextViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewControllerExtensions.swift; sourceTree = "<group>"; };
 		8D3FD9CC279C40440014B550 /* NextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextTableViewCell.swift; sourceTree = "<group>"; };
 		8D3FD9D6279C42D80014B550 /* NextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextModel.swift; sourceTree = "<group>"; };
+		8D5E0C0727A50DCD001F4D4E /* MyIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIDViewController.swift; sourceTree = "<group>"; };
+		8D5E0C0B27A50EBF001F4D4E /* MyIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIDViewController.xib; sourceTree = "<group>"; };
 		8D92D97927985666005A911E /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +98,10 @@
 		8D3FD9CE279C41C60014B550 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				8D3FD9D3279C42510014B550 /* Next */,
-				8D3FD9D0279C41E10014B550 /* TableView */,
 				8D3FD9CF279C41DB0014B550 /* Model */,
+				8D3FD9D0279C41E10014B550 /* TableView */,
+				8D3FD9D3279C42510014B550 /* Next */,
+				8D5E0C0627A4FB07001F4D4E /* MyID */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -154,6 +159,15 @@
 				8D3FD9D6279C42D80014B550 /* NextModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8D5E0C0627A4FB07001F4D4E /* MyID */ = {
+			isa = PBXGroup;
+			children = (
+				8D5E0C0727A50DCD001F4D4E /* MyIDViewController.swift */,
+				8D5E0C0B27A50EBF001F4D4E /* MyIDViewController.xib */,
+			);
+			path = MyID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +232,7 @@
 				8D04C6F62795A65000498D20 /* LaunchScreen.storyboard in Resources */,
 				8D3FD9C9279C3DF60014B550 /* NextViewController.storyboard in Resources */,
 				8D04C6F32795A65000498D20 /* Assets.xcassets in Resources */,
+				8D5E0C0C27A50EBF001F4D4E /* MyIDViewController.xib in Resources */,
 				8D3CC3B22796FCA0005CA907 /* SettingTableViewCell.xib in Resources */,
 				8D04C6F12795A64F00498D20 /* Main.storyboard in Resources */,
 			);
@@ -235,6 +250,7 @@
 				8D3FD9D7279C42D80014B550 /* NextModel.swift in Sources */,
 				8D04C6EA2795A64F00498D20 /* AppDelegate.swift in Sources */,
 				8D3FD9CB279C3EEB0014B550 /* NextViewControllerExtensions.swift in Sources */,
+				8D5E0C0827A50DCD001F4D4E /* MyIDViewController.swift in Sources */,
 				8D3FD9CD279C40440014B550 /* NextTableViewCell.swift in Sources */,
 				8D3CC3B12796FCA0005CA907 /* SettingTableViewCell.swift in Sources */,
 				8D92D97A27985666005A911E /* ViewControllerExtensions.swift in Sources */,

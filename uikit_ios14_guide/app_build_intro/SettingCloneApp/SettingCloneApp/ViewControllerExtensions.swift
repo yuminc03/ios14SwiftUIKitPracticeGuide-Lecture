@@ -41,7 +41,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1 && indexPath.row == 0 {
+        
+//        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let myIdVc = MyIDViewController(nibName: "MyIDViewController", bundle: nil)
+            self.present(myIdVc, animated: true, completion: nil)
+        }
+        else if indexPath.section == 1 && indexPath.row == 0 {
             if let nextVc = UIStoryboard(name: "NextViewController", bundle: nil).instantiateViewController(withIdentifier: "NextViewController") as? NextViewController {
                 self.navigationController?.pushViewController(nextVc, animated: true)
             }
