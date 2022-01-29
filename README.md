@@ -12,9 +12,10 @@
         <b>uikit_ios14_guide > ~.playground</b> - swift 기초문법을 연습하는 playground<br/>
         <b>app_build_intro > App_Start</b> - app build 기초 (@IBAction, @IBOutlet, UIColor...)<br/>
         <b>app_build_intro > PassData</b> - 다른 controller로 data를 옮길 때 사용하는 방법들 (property, segue, instance, delegate..)<br/>
+        <img src = "https://user-images.githubusercontent.com/60338309/151661525-ac969feb-63a3-49b6-a6b9-cc5ebe0134c5.png" width="200"/><br/>
         <b>app_build_intro > DispatchQueueProject</b> - main thread, global thread를 사용하면서 async와 sync의 차이점을 살펴봄<br/>
         <b>app_build_intro > SettingCloneApp</b> - iphone setting app clone coding project<br/>
-        <img src = "https://user-images.githubusercontent.com/60338309/151661342-24215c02-7738-45ef-9f2f-97cad70cee78.png" width="200" style="border: 1px solid black;"/>
+        <img src = "https://user-images.githubusercontent.com/60338309/151661342-24215c02-7738-45ef-9f2f-97cad70cee78.png" width="200"/>
         <img src = "https://user-images.githubusercontent.com/60338309/151661383-33b66820-a7a7-4b29-902c-97cd99cb5bb2.png" width="200"/>
         <img src = "https://user-images.githubusercontent.com/60338309/151661394-c37d3785-f25f-4dbd-b869-9bac1729efde.png" width="200"/><br/>
     </div>
