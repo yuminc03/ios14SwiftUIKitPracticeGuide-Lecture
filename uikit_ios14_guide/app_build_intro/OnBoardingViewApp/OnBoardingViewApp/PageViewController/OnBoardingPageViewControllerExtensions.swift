@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension OnBoardingPageViewController: UIPageViewControllerDataSource {
+extension OnBoardingPageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
                 
@@ -33,6 +33,20 @@ extension OnBoardingPageViewController: UIPageViewControllerDataSource {
             return pages[currentIndex + 1]
         }
         
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        guard let currentVc = pageViewController.viewControllers?.first else { return }
+        
+        guard let currentIndex = pages.firstIndex(of: currentVc) else { return }
+        
+        if currentIndex == pages.count - 1 {
+            //show button
+        }
+        else {
+            //hide button
+        }
     }
     
 }

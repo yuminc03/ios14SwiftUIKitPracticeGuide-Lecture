@@ -15,6 +15,7 @@ class OnBoardingPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
+        setBottomButton()
     }
     
     private func setView() {
@@ -33,5 +34,27 @@ class OnBoardingPageViewController: UIPageViewController {
         self.dataSource = self
         
         setViewControllers([firstItemVc], direction: .forward, animated: true, completion: nil)
+    }
+    
+    private func setBottomButton() {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("확인", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(bottomButtonDidTapped), for: .touchUpInside)
+        view.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            button.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+    
+    @objc private func bottomButtonDidTapped() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
