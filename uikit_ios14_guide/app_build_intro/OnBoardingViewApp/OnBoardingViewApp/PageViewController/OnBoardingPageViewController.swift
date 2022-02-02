@@ -9,13 +9,22 @@ import UIKit
 
 class OnBoardingPageViewController: UIPageViewController {
 
-    var pages = [UIViewController]()
     let contents = "Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain flowering plants in the Coffea genus. From the coffee fruit, the seeds are separated to produce a stable, raw product: unroasted green coffee. The seeds are then roasted, a process which transforms them into a consumable product: roasted coffee, which is ground into fine particles that are typically steeped in hot water before being filtered out, producing a cup of coffee."
+    let startIndex = 0
+    var pages = [UIViewController]()
+    var bottomButtonMargin: NSLayoutConstraint?
+    var pagingView = UIPageControl() //현재 page의 위치를 알려주는 view
+    var currentIndex = 0 {
+        didSet {
+            pagingView.currentPage = currentIndex
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         setBottomButton()
+        setPagingView()
     }
     
     private func setView() {
@@ -31,6 +40,7 @@ class OnBoardingPageViewController: UIPageViewController {
         pages.append(thirdItemVc)
         thirdItemVc.setText(image: "apple_watch", title: "Smart watch", description: contents)
         
+        self.delegate = self
         self.dataSource = self
         
         setViewControllers([firstItemVc], direction: .forward, animated: true, completion: nil)
@@ -49,12 +59,60 @@ class OnBoardingPageViewController: UIPageViewController {
             button.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             button.heightAnchor.constraint(equalToConstant: 50)
         ])
+        
+        bottomButtonMargin = button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        bottomButtonMargin?.isActive = true
+    
+        hideButton()
+    }
+    
+    func setPagingView() {
+        view.addSubview(pagingView)
+        pagingView.translatesAutoresizingMaskIntoConstraints = false
+        pagingView.currentPageIndicatorTintColor = .black //현재 선택한 view의 색
+        pagingView.pageIndicatorTintColor = .lightGray //선택되지 않은 view의 색
+        pagingView.numberOfPages = pages.count
+        pagingView.currentPage = startIndex
+//        pagingView.isUserInteractionEnabled = false //pagingView를 클릭하지 못하게 함
+        
+        NSLayoutConstraint.activate([
+            pagingView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80),
+            pagingView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        pagingView.addTarget(self, action: #selector(pagingViewDidTapped), for: .valueChanged)
     }
     
     @objc private func bottomButtonDidTapped() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func pagingViewDidTapped(sender: UIPageControl) {
+        if sender.currentPage > self.currentIndex {
+            setViewControllers([pages[sender.currentPage]], direction: .reverse, animated: true, completion: nil)
+        }
+        else {
+            setViewControllers([pages[sender.currentPage]], direction: .forward, animated: true, completion: nil)
+        }
+        
+        currentIndex = sender.currentPage
+        
+        bottomButtonPresent()
+    }
+    
+    func bottomButtonPresent() {
+        if currentIndex == pages.count - 1 {
+            showButton()
+        }
+        else {
+            hideButton()
+        }
+
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: [.curveEaseInOut], animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+
     }
 }

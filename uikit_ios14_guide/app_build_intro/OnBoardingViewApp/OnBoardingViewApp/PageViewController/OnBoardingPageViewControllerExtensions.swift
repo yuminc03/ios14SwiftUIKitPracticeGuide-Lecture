@@ -26,12 +26,14 @@ extension OnBoardingPageViewController: UIPageViewControllerDelegate, UIPageView
         
         guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
         
+        self.currentIndex = currentIndex
         if currentIndex == pages.count - 1 {
             return pages.first
         }
         else {
             return pages[currentIndex + 1]
         }
+        
         
     }
     
@@ -41,12 +43,18 @@ extension OnBoardingPageViewController: UIPageViewControllerDelegate, UIPageView
         
         guard let currentIndex = pages.firstIndex(of: currentVc) else { return }
         
-        if currentIndex == pages.count - 1 {
-            //show button
-        }
-        else {
-            //hide button
-        }
+        self.currentIndex = currentIndex
+        
+        bottomButtonPresent()
+
+    }
+    
+    func showButton() {
+        bottomButtonMargin?.constant = 0
+    }
+    
+    func hideButton() {
+        bottomButtonMargin?.constant = 100
     }
     
 }

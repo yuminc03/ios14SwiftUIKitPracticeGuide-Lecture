@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var didShowOnBoardingView = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,12 +21,17 @@ class ViewController: UIViewController {
     }
 
     private func setView() {
-//        let itemVc = OnBoardingItemViewController(.init(nibName: "OnBoardingItemViewController", bundle: nil))
-//        let itemVc = OnBoardingPageViewController()
         
-        let pageVc = OnBoardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
-        pageVc.modalPresentationStyle = .fullScreen
-        self.present(pageVc, animated: true, completion: nil)
+        if didShowOnBoardingView == false { //boardingView를 한 번만 보여주고 싶음
+            
+            didShowOnBoardingView = true
+            
+            let pageVc = OnBoardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: .none)
+            pageVc.modalPresentationStyle = .fullScreen
+            self.present(pageVc, animated: true, completion: nil)
+            
+        }
+        
     }
 }
 
