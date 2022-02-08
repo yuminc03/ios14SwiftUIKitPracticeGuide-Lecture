@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var fetchResults: PHFetchResult<PHAsset>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()

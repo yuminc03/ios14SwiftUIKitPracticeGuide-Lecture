@@ -33,9 +33,19 @@ extension ViewController: PHPickerViewControllerDelegate {
         
         let fetchAssets = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
         
-        fetchAssets.enumerateObjects { asset, index, stop in //fethAsset에서 이미지를 가져옴
-            
-        }
+        
+//        fetchAssets.enumerateObjects { asset, index, stop in //fethAsset에서 이미지를 가져옴
+//
+//            let imageManager = PHImageManager() //image로 바꿔서 가져옴
+//
+//            let scale = UIScreen.main.scale
+//            let imageSize = CGSize(width: 150 * scale, height: 150 * scale)
+//
+//            imageManager.requestImage(for: asset, targetSize: imageSize, contentMode: .aspectFill, options: nil) { image, info in
+//                self.images.append(image)
+//            }
+//
+//        }
         self.dismiss(animated: true, completion: nil)
     }
     
