@@ -11,11 +11,15 @@ import PhotosUI
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.fetchResults?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+        
+        if let asset = fetchResults?[indexPath.row] {
+            cell.loadImage(asset: asset)
+        }
         
         return cell
     }
@@ -31,8 +35,9 @@ extension ViewController: PHPickerViewControllerDelegate {
             $0.assetIdentifier ?? ""
         }
         
-        let fetchAssets = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+        self.fetchResults = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
         
+        collectionView.reloadData()
         
 //        fetchAssets.enumerateObjects { asset, index, stop in //fethAsset에서 이미지를 가져옴
 //
