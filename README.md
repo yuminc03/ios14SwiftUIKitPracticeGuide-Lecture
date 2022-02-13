@@ -24,6 +24,8 @@
         <img src = "https://user-images.githubusercontent.com/60338309/152093451-355e6ee5-1d8b-47dc-9b1c-998ceb2bb7f9.png" width="200"/>
         <img src = "https://user-images.githubusercontent.com/60338309/152094665-e2f93d2b-0999-4fd5-bd68-f6d62161f0a6.png" width="200"/>
         <img src = "https://user-images.githubusercontent.com/60338309/152094697-9fa97482-8997-404c-8a9a-8402a36d9275.png" width="200"/><br/>
+        <b>app_build_intro > PhotoGalleryApp</b> - An app that accesses the Photos app, gets the photos and places them in a collectionView<br/>
+         <img src = "https://user-images.githubusercontent.com/60338309/153755138-4e386ea9-8b36-4a31-83a4-e2316ee2f040.png" width="200"/><br/>
     </div>
 </body>
 </html>
