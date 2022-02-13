@@ -24,35 +24,19 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         return cell
     }
     
-    
 }
 
 extension ViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         
-//        results.map{ $0.assetIdentifier }
-        let identifiers = results.map {
-            $0.assetIdentifier ?? ""
-        }
-        
-        self.fetchResults = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
-        
+        let identifiers = results.map { $0.assetIdentifier ?? "" }
+
+        fetchResults = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: nil)
+
         collectionView.reloadData()
-        
-//        fetchAssets.enumerateObjects { asset, index, stop in //fethAsset에서 이미지를 가져옴
-//
-//            let imageManager = PHImageManager() //image로 바꿔서 가져옴
-//
-//            let scale = UIScreen.main.scale
-//            let imageSize = CGSize(width: 150 * scale, height: 150 * scale)
-//
-//            imageManager.requestImage(for: asset, targetSize: imageSize, contentMode: .aspectFill, options: nil) { image, info in
-//                self.images.append(image)
-//            }
-//
-//        }
-        self.dismiss(animated: true, completion: nil)
+
+        picker.dismiss(animated: true, completion: nil) //갤러리 화면 내리기
+
     }
-    
     
 }

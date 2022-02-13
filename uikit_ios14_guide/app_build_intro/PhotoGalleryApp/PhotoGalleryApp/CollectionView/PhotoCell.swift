@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Photos
+import PhotosUI
 
 class PhotoCell: UICollectionViewCell {
     
@@ -16,21 +16,26 @@ class PhotoCell: UICollectionViewCell {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
     func loadImage(asset: PHAsset) {
         
         let imageManager = PHImageManager() //image로 바꿔서 가져옴
         let scale = UIScreen.main.scale
         let imageSize = CGSize(width: 150 * scale, height: 150 * scale)
-
-        imageManager.requestImage(for: asset, targetSize: imageSize, contentMode: .aspectFill, options: nil) { image, info in
+        
+        let options = PHImageRequestOptions()
+        options.deliveryMode = .opportunistic
+        
+        photoImageView.image = nil
+        
+        imageManager.requestImage(for: asset, targetSize: imageSize, contentMode: .aspectFill, options: options) { image, info in
+//            if (info?[PHImageResultIsDegradedKey] as? Bool) == true {
+//                //저화질
+//                self.photoImageView.image = image
+//            }
+//            else {
+//                //고화질
+//
+//            }
             self.photoImageView.image = image
         }
     }

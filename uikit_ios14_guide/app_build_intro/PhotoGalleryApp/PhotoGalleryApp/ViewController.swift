@@ -76,11 +76,12 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 
-    @objc private func photoItemDidTapped() { //갤러리 보여줌
+    @objc func photoItemDidTapped() { //갤러리 보여줌
         let library = PHPhotoLibrary.shared() //singleton 형태
         
         var configuration = PHPickerConfiguration(photoLibrary: library)
         configuration.selectionLimit = 10
+        configuration.filter = PHPickerFilter.images
         
         let picker = PHPickerViewController(configuration: configuration) //framework에서 제공하는 gallery 모양 띄움
         picker.delegate = self
@@ -88,8 +89,8 @@ class ViewController: UIViewController {
         
     }
     
-    @objc private func reloadItemDidTapped() { //사진 데이터 다시 불러옴
-        
+    @objc func reloadItemDidTapped() { //사진 데이터 다시 불러옴
+        collectionView.reloadData()
     }
 }
 
