@@ -14,11 +14,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.movieModel?.results?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell", for: indexPath) as! MovieTableViewCell
+        let currency = self.movieModel?.results?[indexPath.row].currency ?? ""
+        let price = self.movieModel?.results?[indexPath.row].trackPrice ?? 0
+        
+        cell.titleLabel.text = self.movieModel?.results?[indexPath.row].trackName
+        cell.descriptionLabel.text = self.movieModel?.results?[indexPath.row].shortDescription
+        cell.priceLabel.text = "\(currency) \(price)"
+        
         return cell
     }
     

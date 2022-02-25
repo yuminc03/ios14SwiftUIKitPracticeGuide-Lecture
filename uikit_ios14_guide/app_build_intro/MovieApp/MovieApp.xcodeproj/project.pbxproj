@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DAD35FD27C7BE7100B08CDC /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAD35FC27C7BE7100B08CDC /* MovieModel.swift */; };
 		8DAFC10627BA9A21007DCC43 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAFC10527BA9A21007DCC43 /* MovieTableViewCell.swift */; };
 		8DDA5F0727B9451B006875F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA5F0627B9451B006875F6 /* AppDelegate.swift */; };
 		8DDA5F0927B9451B006875F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDA5F0827B9451B006875F6 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8DAD35FC27C7BE7100B08CDC /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		8DAFC10527BA9A21007DCC43 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		8DDA5F0327B9451B006875F6 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DDA5F0627B9451B006875F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				8DDA5F0A27B9451B006875F6 /* ViewController.swift */,
 				8DDA5F1A27B94712006875F6 /* ViewControllerExtensions.swift */,
 				8DAFC10527BA9A21007DCC43 /* MovieTableViewCell.swift */,
+				8DAD35FC27C7BE7100B08CDC /* MovieModel.swift */,
 				8DDA5F0C27B9451B006875F6 /* Main.storyboard */,
 				8DDA5F0F27B9451C006875F6 /* Assets.xcassets */,
 				8DDA5F1127B9451C006875F6 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAD35FD27C7BE7100B08CDC /* MovieModel.swift in Sources */,
 				8DAFC10627BA9A21007DCC43 /* MovieTableViewCell.swift in Sources */,
 				8DDA5F1B27B94712006875F6 /* ViewControllerExtensions.swift in Sources */,
 				8DDA5F0B27B9451B006875F6 /* ViewController.swift in Sources */,
