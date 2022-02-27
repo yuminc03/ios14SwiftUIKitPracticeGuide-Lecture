@@ -10,10 +10,10 @@ import Foundation
 struct MovieModel: Codable {
     
     let resultCount: Int?
-    let results: [Result]?
+    let results: [MovieResult]?
 }
 
-struct Result: Codable {
+struct MovieResult: Codable {
     let trackName: String? //movie title
     let previewUrl: String? //movie url
     let image: String? //movie image
@@ -21,6 +21,7 @@ struct Result: Codable {
     let longDescription: String?
     let trackPrice: Float?
     let currency: String?
+    let releaseDate: String?
     
     enum CodingKeys: String, CodingKey {
         case image = "artworkUrl100"
@@ -30,5 +31,6 @@ struct Result: Codable {
         case longDescription
         case trackPrice
         case currency
+        case releaseDate
     }
 }
