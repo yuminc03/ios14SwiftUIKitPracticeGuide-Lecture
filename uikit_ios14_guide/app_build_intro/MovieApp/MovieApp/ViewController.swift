@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    var searchTerm = ""
     
     var networkLayer = NetworkLayer()
     
@@ -26,36 +27,22 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        
         requestMovieAPI()
     }
     
-    func loadImage(urlString: String) {
-        
-    }
-    
-    //network
     func requestMovieAPI() {
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
-        var components = URLComponents(string: "https://itunes.apple.com/search")
         
-        //parameters
-        let term = URLQueryItem(name: "term", value: "marvel") //key와 value 넣기
+        let term = URLQueryItem(name: "term", value: searchTerm) //key와 value 넣기
         let media = URLQueryItem(name: "media", value: "movie")
+        let querys = [term, media]
         
-        components?.queryItems = [term, media]
-        
-        guard let url = components?.url else { return }
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        let task = session.dataTask(with: request) { data, response, error in
-//            print( (response as! HTTPURLResponse).statusCode )
+        networkLayer.request(type: .searchMovie(querys: querys)) { data, response, error in
             
             if let data = data {
                 do {
                     self.movieModel = try JSONDecoder().decode(MovieModel.self, from: data)
-//                    print(self.movieModel ?? "no data")
+                    print(self.movieModel ?? "no data")
                     
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -64,38 +51,84 @@ class ViewController: UIViewController {
                     print(error)
                 }
             }
-            
         }
-        
-        task.resume()
-        session.finishTasksAndInvalidate()
-        
     }
     
-    //url을 통해 image 불러옴
-    func loadImage(urlString: String, completion: @escaping (UIImage?) -> Void) { //@escaping closure는 completion() 값을 계속 유지하고 있는다
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig)
+    func loadImage(urlString: String, completion: @escaping (UIImage?) -> Void) {
         
-        if let hasURL = URL(string: urlString) {
+        networkLayer.request(type: .justURL(urlString: urlString)) { data, response, error in
             
-            var request = URLRequest(url: hasURL)
-            request.httpMethod = "GET"
-            
-            session.dataTask(with: request) { data, request, error in
-//                print( (request as! HTTPURLResponse).statusCode )
-                
-                if let hasData = data {
-                    completion( UIImage(data: hasData) )
-                    return
-                }
-            }.resume()
-            session.finishTasksAndInvalidate()
+            if let hasData = data {
+                completion( UIImage(data: hasData) )
+                return
+            }
+            completion(nil)
         }
-        
-        completion(nil)
-        
     }
+    
+    //network
+//    private func requestMovieAPI() {
+//        let sessionConfig = URLSessionConfiguration.default
+//        let session = URLSession(configuration: sessionConfig)
+//        var components = URLComponents(string: "https://itunes.apple.com/search")
+//
+//        //parameters
+//        let term = URLQueryItem(name: "term", value: "marvel") //key와 value 넣기
+//        let media = URLQueryItem(name: "media", value: "movie")
+//
+//        components?.queryItems = [term, media]
+//
+//        guard let url = components?.url else { return }
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//
+//        let task = session.dataTask(with: request) { data, response, error in
+////            print( (response as! HTTPURLResponse).statusCode )
+//
+//            if let data = data {
+//                do {
+//                    self.movieModel = try JSONDecoder().decode(MovieModel.self, from: data)
+////                    print(self.movieModel ?? "no data")
+//
+//                    DispatchQueue.main.async {
+//                        self.tableView.reloadData()
+//                    }
+//                } catch {
+//                    print(error)
+//                }
+//            }
+//
+//        }
+//
+//        task.resume()
+//        session.finishTasksAndInvalidate()
+//
+//    }
+    
+    //url을 통해 image 불러옴
+//    func loadImage(urlString: String, completion: @escaping (UIImage?) -> Void) { //@escaping closure는 completion() 값을 계속 유지하고 있는다
+//        let sessionConfig = URLSessionConfiguration.default
+//        let session = URLSession(configuration: sessionConfig)
+//
+//        if let hasURL = URL(string: urlString) {
+//
+//            var request = URLRequest(url: hasURL)
+//            request.httpMethod = "GET"
+//
+//            session.dataTask(with: request) { data, request, error in
+////                print( (request as! HTTPURLResponse).statusCode )
+//
+//                if let hasData = data {
+//                    completion( UIImage(data: hasData) )
+//                    return
+//                }
+//            }.resume()
+//            session.finishTasksAndInvalidate()
+//        }
+//
+//        completion(nil)
+//
+//    }
     
     
 }

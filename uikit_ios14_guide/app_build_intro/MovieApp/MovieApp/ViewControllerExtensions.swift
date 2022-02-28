@@ -66,8 +66,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) { //search bar 누르면 호출됨
         
+        guard let hasText = searchBar.text else { return }
+        self.searchTerm = hasText
+        requestMovieAPI()
+        self.view.endEditing(true)
     }
     
 }

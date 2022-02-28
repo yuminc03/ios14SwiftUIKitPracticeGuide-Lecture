@@ -40,7 +40,7 @@ class NetworkLayer {
         
     }
     
-    func buildRequest(type: MovieAPIType) throws -> URLRequest {
+    private func buildRequest(type: MovieAPIType) throws -> URLRequest {
         
         switch type {
             
