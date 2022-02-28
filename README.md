@@ -27,10 +27,9 @@
         <b>app_build_intro > PhotoGalleryApp</b> - An app that accesses the Photos app, gets the photos and places them in a collectionView<br/>
          <img src = "https://user-images.githubusercontent.com/60338309/153755138-4e386ea9-8b36-4a31-83a4-e2316ee2f040.png" width="200"/><br/>
         <b>app_build_intro > MovieApp</b> - Search for a movie and click on the Movie column to view the movie trailer and description.<br/>
-         <img src = "https://user-images.githubusercontent.com/60338309/156001357-a305467e-92c3-448f-add6-cdcf06527c29.png" width="200"/>
+         <img src = "https://user-images.githubusercontent.com/60338309/156001590-56a77cb5-8701-4198-b3d9-66420116ba8c.png" width="200"/>
         <img src = "https://user-images.githubusercontent.com/60338309/156001468-bfc0fc99-84d0-4849-ad3a-b2111702cd61.png" width="200"/><br/>
     </div>
 </body>
-
 
 </html>
