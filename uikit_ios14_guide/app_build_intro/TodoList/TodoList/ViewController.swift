@@ -9,12 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var todoTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
     private func setupView() {
+        
+        todoTableView.delegate = self
+        todoTableView.dataSource = self
+        
         self.title = "My to do List"
         
         let rightItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(rightButtonDidTapped))
@@ -22,7 +28,7 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightItem
         
         let barAppearance = UINavigationBarAppearance()
-        barAppearance.backgroundColor = .gray
+        barAppearance.backgroundColor = .systemBlue
         self.navigationController?.navigationBar.standardAppearance = barAppearance
     }
     
