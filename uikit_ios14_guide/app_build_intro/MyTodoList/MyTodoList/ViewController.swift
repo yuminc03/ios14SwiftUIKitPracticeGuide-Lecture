@@ -55,6 +55,8 @@ class ViewController: UIViewController {
     
     @objc private func rightButtonDidTapped() {
         
+        let vc = TodoDetailViewController.init(nibName: "TodoDetailViewController", bundle: nil)
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
     }
 }
-

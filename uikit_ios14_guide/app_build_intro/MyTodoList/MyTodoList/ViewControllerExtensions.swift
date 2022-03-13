@@ -37,3 +37,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+extension ViewController: TodoDetailViewControllerDelegate {
+    
+    func didFinishSaveData() {
+        self.fetchData()
+        self.todoTableView.reloadData()
+    }
+    
+}
