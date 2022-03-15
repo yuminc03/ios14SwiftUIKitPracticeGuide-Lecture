@@ -34,17 +34,20 @@ class RotateButton: UIButton {
     
     private func changeDesignButton() {
         
-        if isUp == RotateType.down {
+        UIView.animate(withDuration: 0.25, animations: {
             
-            self.imageView?.transform = CGAffineTransform(rotationAngle: .pi)
-            self.backgroundColor = self.backgroundColor?.withAlphaComponent(0.3)
-        }
-        else {
+            if self.isUp == RotateType.up {
+                
+                self.imageView?.transform = CGAffineTransform(rotationAngle: .pi)
+                self.backgroundColor = self.backgroundColor?.withAlphaComponent(0.3)
+            }
+            else {
+                
+                self.imageView?.transform = .identity
+                self.backgroundColor = self.backgroundColor?.withAlphaComponent(1)
+            }
             
-            self.imageView?.transform = .identity
-            self.backgroundColor = self.backgroundColor?.withAlphaComponent(1)
-        }
-        
+        }, completion: nil)
     }
     
     @objc private func buttonDidTapped(sender: UIButton) {
