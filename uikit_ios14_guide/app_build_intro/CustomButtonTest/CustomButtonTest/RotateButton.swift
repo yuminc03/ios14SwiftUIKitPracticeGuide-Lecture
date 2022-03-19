@@ -11,14 +11,36 @@ enum RotateType {
     case up
     case down
 }
-class RotateButton: UIButton {
 
-    var isUp = RotateType.down {
-        didSet {
-            changeDesignButton()
-        }
+class MyButton {
+    
+    convenience init() {
+        self.init(frame: CGRect.zero)
     }
     
+    init(frame: CGRect) {
+        
+    }
+    
+    required init(coder: NSCoder) {
+        
+    }
+}
+
+class CustomButton: MyButton {
+   
+    init() {
+        super.init(frame: .zero) // MyButton에 있는 conveninence init()
+    }
+    
+    required init(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+}
+
+class RotateButton: UIButton {
+
     init() {
         super.init(frame: .zero)
         self.configuration()
@@ -26,7 +48,17 @@ class RotateButton: UIButton {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.configuration()
     }
+    
+    var isUp = RotateType.down {
+        didSet {
+            changeDesignButton()
+        }
+    }
+    
+    var selectTypeCallBack: ((RotateType) -> Void)?
+    
     
     func configuration() {
         self.addTarget(self, action: #selector(buttonDidTapped), for: .touchUpInside)
@@ -58,6 +90,8 @@ class RotateButton: UIButton {
         else {
             isUp = .up
         }
+        
+        selectTypeCallBack?(isUp)
     }
     
 }
