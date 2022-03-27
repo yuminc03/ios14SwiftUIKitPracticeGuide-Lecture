@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-Jn-dA0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-Jn-dA0">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoTableViewCell" id="vcU-ix-Uom" customClass="TodoTableViewCell" customModule="MyTodoList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="93.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTodoTableViewCell" id="vcU-ix-Uom" customClass="MyTodoTableViewCell" customModule="MyTodoList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="93.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vcU-ix-Uom" id="V8s-JD-wku">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
@@ -47,6 +47,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAJ-NH-lJF">
+                                                    <rect key="frame" x="0.0" y="92.5" width="414" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="xxn-DQ-JSl"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="0jd-Q5-Khw" firstAttribute="leading" secondItem="V8s-JD-wku" secondAttribute="leadingMargin" constant="20" id="4H5-ub-dwL"/>
@@ -54,16 +61,20 @@
                                                 <constraint firstItem="V16-ru-1OD" firstAttribute="leading" secondItem="0jd-Q5-Khw" secondAttribute="trailing" constant="20" id="Ngv-77-ff8"/>
                                                 <constraint firstItem="Taa-vU-QNB" firstAttribute="leading" secondItem="0jd-Q5-Khw" secondAttribute="trailing" constant="20" id="UqG-nS-HCr"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="V16-ru-1OD" secondAttribute="trailing" constant="20" id="bQk-Cz-UYY"/>
+                                                <constraint firstAttribute="trailing" secondItem="yAJ-NH-lJF" secondAttribute="trailing" id="g22-sD-ehJ"/>
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="V16-ru-1OD" secondAttribute="bottom" constant="10" id="jsK-VO-mBk"/>
                                                 <constraint firstItem="0jd-Q5-Khw" firstAttribute="centerY" secondItem="V8s-JD-wku" secondAttribute="centerY" id="kzv-56-Yjk"/>
+                                                <constraint firstAttribute="bottom" secondItem="yAJ-NH-lJF" secondAttribute="bottom" id="mIt-ty-SAr"/>
                                                 <constraint firstItem="Taa-vU-QNB" firstAttribute="top" secondItem="V8s-JD-wku" secondAttribute="topMargin" constant="10" id="uvU-xW-ucV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Taa-vU-QNB" secondAttribute="trailing" constant="20" id="wJa-UC-BRI"/>
+                                                <constraint firstItem="yAJ-NH-lJF" firstAttribute="leading" secondItem="V8s-JD-wku" secondAttribute="leading" id="zMD-pL-cGy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="V16-ru-1OD" id="4rC-B3-p7w"/>
-                                            <outlet property="priorityView" destination="0jd-Q5-Khw" id="i02-S6-Czz"/>
-                                            <outlet property="topTitleLabel" destination="Taa-vU-QNB" id="GHa-4a-kMD"/>
+                                            <outlet property="dateLabel" destination="V16-ru-1OD" id="FYE-GD-hSU"/>
+                                            <outlet property="priorityView" destination="0jd-Q5-Khw" id="1b1-yB-tGU"/>
+                                            <outlet property="separator" destination="yAJ-NH-lJF" id="ti4-QZ-znP"/>
+                                            <outlet property="topTitleLabel" destination="Taa-vU-QNB" id="RAA-4l-AoS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -113,6 +124,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
