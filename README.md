@@ -29,6 +29,7 @@
         <b>app_build_intro > MovieApp</b> - Search for a movie and click on the Movie column to view the movie trailer and description.<br/>
          <img src = "https://user-images.githubusercontent.com/60338309/156001590-56a77cb5-8701-4198-b3d9-66420116ba8c.png" width="200"/>
         <img src = "https://user-images.githubusercontent.com/60338309/156001468-bfc0fc99-84d0-4849-ad3a-b2111702cd61.png" width="200"/><br/>
+        <b>app_build_intro > MyTodoList</b> - An app that uses CoreData to permanently store my to-do data on the device.<br/>
     </div>
 </body>
 
