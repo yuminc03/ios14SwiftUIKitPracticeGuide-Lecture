@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body backgroundColor = "gray">
     <div class="content">
         <b>inflearn의 강의 - "UIKit - iOS 실무 가이드 〈iOS앱 진짜 개발자 되기〉"👩‍💻📱</b><br/>
         <b>uikit_ios14_guide > ~.playground</b> - swift 기초문법을 연습하는 playground<br/>
